@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ciacho-branie</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Pacifico" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="naglowek">
+		<div id="tytul">
+			<h1>Zapraszamy na pyszne ciastka do naszych kawiarni</h1>
+		</div>
+		<div id="lista_kawiarni">
+			<h2>Kawiarnie:</h2>
+			<ul>
+				<li>ul. Słodkości 21</li>
+				<li>ul. Babeczkowa 15</li>
+				<li>ul. Tortowa 7</li>
+				<li>ul. Kraina Pyszności 52</li>	
+			</ul>
+		</div>
+			<img id="kolorowa_mufinka" src="logo2.jpg">
+		</div>
+	</div>
+	<div id="zawartosc_strony">
+		<div id="obrazki_ciastek">
+			<div class="obrazek" onclick="pokazPrzepis('ciasto czekoladowe')">
+				<img id="ciacho_1" class="ciacha" src="christmasCake.jpg">
+				<div class="podpis">Ciasto czekoladowe</div>
+			</div>
+			<div class="obrazek" onclick="pokazPrzepis('czekoladowa chmurka')">
+				<img id="ciacho_2" class="ciacha" src="chockolateCake.jpg">
+				<div class="podpis">Czekoladowa chmurka</div>
+			</div>
+			<div class="obrazek" onclick="pokazPrzepis('panettone')">
+				<img id="ciacho_3" class="ciacha" src="panettone.jpg">
+				<div class="podpis">Panettone</div>
+			</div>
+		</div>
+	</div>
+	<table>
+	 <tr>
+	<th>Wypiek</th>
+	<th>Cena</th>
+
+	</tr>
+	 <tr>
+    <td>Ciasto czekoladowe</td>
+    <td>10 zł</td>
+  </tr>
+  <tr>
+    <td>Czekoladowa chmurka</td>
+    <td>12 zł</td>
+  </tr>
+  <tr>
+    <td>Panettone</td>
+    <td>15 zł</td>
+  </tr>
+</table>
+
+<div id="przepis"></div>
+
+<script>
+	function pokazPrzepis(ciasto) {
+		var przepisDiv = document.getElementById("przepis");
+		switch(ciasto) {
+			case 'ciasto czekoladowe':
+				przepisDiv.innerHTML = "<h2>Przepis na ciasto czekoladowe:</h2><p>Składniki: czekolada, masło, jajka, cukier...</p>";
+				break;
+			case 'czekoladowa chmurka':
+				przepisDiv.innerHTML = "<h2>Przepis na czekoladową chmurkę:</h2><p>Składniki: czekolada, masło, jajka, cukier...</p>";
+				break;
+			case 'panettone':
+				przepisDiv.innerHTML = "<h2>Przepis na panettone:</h2><p>Składniki: mąka, drożdże, cukier, rodzynki, skórka pomarańczowa...</p>";
+				break;
+			default:
+				przepisDiv.innerHTML = "<p>Brak przepisu</p>";
+				break;
+		}
+		przepisDiv.style.display = "block";
+	}
+
+	window.onclick = function(event) {
+		var przepisDiv = document.getElementById("przepis");
+		if (event.target == przepisDiv) {
+			przepisDiv.style.display = "none";
+		}
+	}
+</script>
+	
+</body>
+
+</html>

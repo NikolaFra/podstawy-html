@@ -1,0 +1,128 @@
+body {
+	background: linear-gradient(yellow, green,#359);
+	font-family: 'Cabin Sketch', cursive;
+	color: black;
+	text-align: center;
+	margin: 2%;
+}
+
+#naglowek {
+	margin: 0 auto;
+	text-align: left;
+	width: 90%;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+}
+
+#tytul {
+	width: 60%;
+	background: #00939c;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px;
+}
+
+#lista_kawiarni {
+	width: 30%;
+	background-color: #df8f46;
+	padding: 0 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+#lista_kawiarni > h2 {
+	margin: 0;
+}
+
+#lista_kawiarni > ul {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+
+#pudelko_na_logo {
+	width: 10%;
+	background: #df8f46;
+}
+
+#zawartosc_strony {
+	margin: 50px 5% 0 5%;
+	padding: 2%;
+	background: #ff798a;
+}
+
+#kolorowa_mufinka { width: 50px;
+height: 50px; 
+
+}
+
+.table {
+        width: 100%;
+        background-color: blue;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 3px solid #ddd;
+        width: 100%;
+    }
+    th {
+        background-color: black;
+        color: white;
+        font-family: 'Pacifico', cursive;
+        }
+
+    td {
+        background-color: blue;
+        color: white;
+        font-family: 'Pacifico', cursive;
+        }
+
+#przepis {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: white;
+	border: 2px solid black;
+	z-index: 1000;
+		}
+
+#obrazki_ciastek {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	/* display:flex; */
+	/* align-items: stretch; */
+}
+
+
+.obrazek {
+	width: 32%;
+	display: flex;
+	flex-flow: column;
+	flex-shrink: 3;
+}
+
+.ciacha {
+	width: 100%;
+	height:100%;
+	object-fit: contain;
+}
+
+.podpis {
+	margin-top: 10px;
+	background-color: #00939c;
+	width: 100%;
+	text-align: center;
+	line-height: 80px;
+	font-size: 25px;
+	font-family: 'Pacifico', cursive;
+}
